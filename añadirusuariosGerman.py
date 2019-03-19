@@ -7,7 +7,6 @@ import sys
 import csv
 import traceback
 import time
-import random
  
 api_id = 623438
 api_hash = '50c964e471536b4981ec5b608a85034b'
@@ -66,12 +65,7 @@ target_group_entity = InputPeerChannel(target_group.id,target_group.access_hash)
  
 mode = int(input("Enter 1 to add by username or 2 to add by ID: "))
  
-n = 0
- 
 for user in users:
-    n += 1
-    if n % 50 == 0:
-    sleep(900)
     try:
         print ("Adding {}".format(user['id']))
         if mode == 1:
@@ -83,8 +77,8 @@ for user in users:
         else:
             sys.exit("Invalid Mode Selected. Please Try Again.")
         client(InviteToChannelRequest(target_group_entity,[user_to_add]))
-        print("Waiting for 60-180 Seconds...")
-        time.sleep(random.randrange(60, 180))
+        print("Waiting 60 Seconds...")
+        time.sleep(60)
     except PeerFloodError:
         print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
     except UserPrivacyRestrictedError:

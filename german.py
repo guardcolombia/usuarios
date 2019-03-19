@@ -32,7 +32,7 @@ with open(input_file, encoding='UTF-8') as f:
 
 mode = int(input("Enter 1 to send by user ID or 2 to send by username: "))
 
-messages= ["Hello {},I want to invite you to my OTC bitcoin Group, We trade BTC,USDT,ETH,ETC Escrow services, Members with 10,000 Positive trades in localbitcoins : (Legacy, bitgo, Tmf )or multiple signature bitpay Wallet, we sell/buy in everywhere Link :http://bit.ly/otcmarkets,Please Dont report as SPAM, just say DONT DISTRUB, and ill never send this message"]
+messages= ["Hello {},I want to invite you to my OTC bitcoin Group, We trade BTC,USDT,ETH,ETC Escrow services, Members with 10,000 Positive trades in localbitcoins : (Legacy, bitgo, Tmf )or multiple signature bitpay Wallet, we sell/buy in everywhere Link :http://bit.ly/otcmarkets,Please Dont report as SPAM, just say DONT DISTRUB, and ill never send this message again"]
 
 for user in users:
     if mode == 2:
